@@ -102,24 +102,22 @@ export default function Projects() {
       >
         {projects.map((card, index) => (
           <SwiperSlide key={index}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] mx-auto rounded-2xl overflow-hidden 
-                        border border-white/20 backdrop-blur-md 
-                        shadow-[0_8px_30px_rgba(0,0,0,0.3)] 
-                        hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)] 
-                        transition-all duration-500 flex items-center justify-center bg-white/10 z-10"
-            >
-              <Image
-                src={card.img}
-                alt={`Project ${index}`}
-                fill
-                className="object-contain"
-              />
-            </motion.div>
+<motion.div
+  initial={{ opacity: 0, scale: 0.85 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className="relative w-[310px] h-[310px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] 
+             mx-auto flex items-center justify-center"
+>
+  <Image
+    src={card.img}
+    alt={`Project ${index}`}
+    fill
+    className="object-contain"
+  />
+</motion.div>
+
           </SwiperSlide>
         ))}
       </Swiper>
