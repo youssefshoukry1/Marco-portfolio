@@ -79,16 +79,16 @@ export default function Contact() {
         transition={{ duration: 1, delay: 0.6 }}
         className="flex gap-6 mt-8 text-2xl z-10"
       >
-        <a href="https://instagram.com" target="_blank" className="text-pink-400 hover:scale-110 transition-transform">
+        <a href="https://www.instagram.com/marco_zakaria_photography?igsh=MTVibG93MzJ2dDZ6NQ%3D%3D&utm_source=qr" target="_blank" className="text-pink-400 hover:scale-110 transition-transform">
           <FaInstagram />
         </a>
-        <a href="mailto:example@gmail.com" className="text-red-400 hover:scale-110 transition-transform">
+        <a href="mailto:marcozakaria141@gmail.com" className="text-red-400 hover:scale-110 transition-transform">
           <SiGmail />
         </a>
-        <a href="https://wa.me/201204470794" target="_blank" className="text-green-400 hover:scale-110 transition-transform">
+        <a href="https://wa.me/+201284504065" target="_blank" className="text-green-400 hover:scale-110 transition-transform">
           <FaWhatsapp />
         </a>
-        <a href="https://facebook.com" target="_blank" className="text-blue-400 hover:scale-110 transition-transform">
+        <a href="https://www.facebook.com/marko.migo?mibextid=ZbWKwL" target="_blank" className="text-blue-400 hover:scale-110 transition-transform">
           <FaFacebook />
         </a>
       </motion.div>

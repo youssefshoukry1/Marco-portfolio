@@ -152,40 +152,6 @@ export default function Home() {
   />
 </motion.div>
 
-{/* السوشيال ميديا بشكل أفضل */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, delay: 0.6 }}
-  className="flex gap-8 mt-8 justify-center z-10"
->
-  {[{
-    icon: <FaInstagram />,
-    color: "text-pink-400",
-    link: "https://instagram.com"
-  },{
-    icon: <SiGmail />,
-    color: "text-red-400",
-    link: "mailto:example@gmail.com"
-  },{
-    icon: <FaWhatsapp />,
-    color: "text-green-400",
-    link: "https://wa.me/201204470794"
-  },{
-    icon: <FaFacebook />,
-    color: "text-blue-400",
-    link: "https://facebook.com"
-  }].map((item, idx) => (
-    <a
-      key={idx}
-      href={item.link}
-      target="_blank"
-      className={`${item.color} p-3 bg-white/10 rounded-full shadow-lg hover:scale-125 transition-transform duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.7)]`}
-    >
-      {item.icon}
-    </a>
-  ))}
-</motion.div>
 
 
         {/* النص */}
@@ -230,6 +196,41 @@ export default function Home() {
             />
           </motion.div>
 
+
+{/* السوشيال ميديا بشكل أفضل */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.6 }}
+  className="flex gap-8 mt-8 justify-center z-10"
+>
+  {[{
+    icon: <FaInstagram />,
+    color: "text-pink-400",
+    link: "https://www.instagram.com/marco_zakaria_photography?igsh=MTVibG93MzJ2dDZ6NQ%3D%3D&utm_source=qr"
+  },{
+    icon: <SiGmail />,
+    color: "text-red-400",
+    link: "mailto:marcozakaria141@gmail.com"
+  },{
+    icon: <FaWhatsapp />,
+    color: "text-green-400",
+    link: "https://wa.me/+201284504065"
+  },{
+    icon: <FaFacebook />,
+    color: "text-blue-400",
+    link: "https://www.facebook.com/marko.migo?mibextid=ZbWKwL"
+  }].map((item, idx) => (
+    <a
+      key={idx}
+      href={item.link}
+      target="_blank"
+      className={`${item.color} p-3 bg-white/10 rounded-full shadow-lg hover:scale-125 transition-transform duration-300 hover:shadow-[0_0_15px_rgba(255,255,255,0.7)]`}
+    >
+      {item.icon}
+    </a>
+  ))}
+</motion.div>
 
         </motion.div>
       </section>
