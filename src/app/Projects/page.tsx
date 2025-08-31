@@ -9,72 +9,52 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projects = [
-  { img: "/img (1).webp" },
-  { img: "/img (2).webp" },
-  { img: "/img (3).webp" },
-  { img: "/img (4).webp" },
-  { img: "/img (5).webp" },
-  { img: "/img (6).webp" },
-  { img: "/img (7).webp" },
-  { img: "/img (8).webp" },
-  { img: "/img (9).webp" },
-  { img: "/img (10).webp" },
-  { img: "/img (11).webp" },
-  { img: "/img (12).webp" },
-  { img: "/img (13).webp" },
-  { img: "/img (14).webp" },
-  { img: "/img (15).webp" },
-  { img: "/img (16).webp" },
+  { img: "/img (1).webp" }, { img: "/img (2).webp" },
+  { img: "/img (3).webp" }, { img: "/img (4).webp" },
+  { img: "/img (5).webp" }, { img: "/img (6).webp" },
+  { img: "/img (7).webp" }, { img: "/img (8).webp" },
+  { img: "/img (9).webp" }, { img: "/img (10).webp" },
+  { img: "/img (11).webp" }, { img: "/img (12).webp" },
+  { img: "/img (13).webp" }, { img: "/img (14).webp" },
+  { img: "/img (15).webp" }, { img: "/img (16).webp" },
   { img: "/img (17).webp" },
 ];
 
 export default function Projects() {
   return (
-    <section id="Projects" className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#1f1f1f] via-[#2b2b2b] to-[#3a3a3a]">
-      
-      {/* خلفية متحركة (فقاعات) */}
+    <section
+      id="Projects"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f]"
+    >
+      {/* 🔹 خلفية متدرجة + فقاعات */}
+      <motion.div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(120deg, rgba(0,120,255,0.1), rgba(163,228,255,0.05), rgba(128,0,255,0.1))",
+          backgroundSize: "300% 300%",
+        }}
+        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <div className="absolute inset-0 overflow-hidden">
-        {/* فقاعة 1 */}
         <motion.div
-          className="absolute w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, -100, 0],
-            y: [0, -80, 60, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          className="absolute w-80 h-80 rounded-full blur-3xl bg-gradient-to-br from-cyan-400/20 to-blue-500/10 mix-blend-screen"
+          animate={{ x: [0, 120, -120, 0], y: [0, -100, 80, 0], scale: [1, 1.15, 0.9, 1] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
           style={{ top: "10%", left: "15%" }}
         />
-        {/* فقاعة 2 */}
         <motion.div
-          className="absolute w-96 h-96 bg-gray-400/15 rounded-full blur-3xl"
-          animate={{
-            x: [0, -120, 80, 0],
-            y: [0, 70, -90, 0],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{ bottom: "10%", right: "10%" }}
+          className="absolute w-96 h-96 rounded-full blur-3xl bg-gradient-to-tr from-purple-400/15 to-pink-400/10 mix-blend-screen"
+          animate={{ x: [0, -140, 100, 0], y: [0, 90, -100, 0], scale: [1, 1.2, 0.85, 1] }}
+          transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
+          style={{ bottom: "5%", right: "8%" }}
         />
-        {/* فقاعة 3 */}
         <motion.div
-          className="absolute w-60 h-60 bg-cyan-300/10 rounded-full blur-2xl"
-          animate={{
-            x: [0, 60, -60, 0],
-            y: [0, -50, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          style={{ bottom: "20%", left: "20%" }}
+          className="absolute w-64 h-64 rounded-full blur-2xl bg-gradient-to-bl from-cyan-300/15 to-teal-400/10 mix-blend-screen"
+          animate={{ x: [0, 70, -70, 0], y: [0, -60, 60, 0], scale: [1, 1.1, 0.9, 1] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+          style={{ bottom: "15%", left: "18%" }}
         />
       </div>
 
@@ -94,30 +74,27 @@ export default function Projects() {
         modules={[Pagination, Navigation]}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={1} 
-          pagination={{ clickable: true, dynamicBullets: true }}
-
+        slidesPerView={1}
+        pagination={{ clickable: true, dynamicBullets: true }}
         navigation={{ enabled: true }}
         className="w-full max-w-6xl z-10"
       >
         {projects.map((card, index) => (
           <SwiperSlide key={index}>
-<motion.div
-  initial={{ opacity: 0, scale: 0.85 }}
-  whileInView={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
-  viewport={{ once: true }}
-  className="relative w-[310px] h-[310px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] 
-             mx-auto flex items-center justify-center rounded-2xl"
->
-  <Image
-    src={card.img}
-    alt={`Project ${index}`}
-    fill
-    className="object-contain rounded-2xl"
-  />
-</motion.div>
-
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="relative w-[310px] h-[310px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] mx-auto flex items-center justify-center rounded-2xl"
+            >
+              <Image
+                src={card.img}
+                alt={`Project ${index}`}
+                fill
+                className="object-contain rounded-2xl"
+              />
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
