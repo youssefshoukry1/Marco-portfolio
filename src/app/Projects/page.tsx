@@ -105,7 +105,7 @@ export default function Projects() {
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
               viewport={{ once: true }}
               className="relative w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] mx-auto rounded-2xl overflow-hidden 
                         border border-white/20 backdrop-blur-md 
