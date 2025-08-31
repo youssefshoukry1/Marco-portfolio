@@ -61,7 +61,7 @@ export default function Contact() {
         />
         <textarea
           placeholder="Your Message"
-          rows="4"
+          rows={4}
           className="p-3 rounded-lg bg-gray-800/50 border border-gray-600 text-gray-100 focus:outline-none focus:border-cyan-400"
         />
         <button
