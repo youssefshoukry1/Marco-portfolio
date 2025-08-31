@@ -161,9 +161,20 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative flex justify-center items-center flex-col text-center z-10"
         >
-          <h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide">
-            {"Hey, I'm"} <span className="text-[#a3e4ff]">Marco Zakaria</span>
-          </h1>
+<h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide">
+  {"Hey, "} {/* ثابت */}
+  {Array.from("I'm Marco Zakaria").map((char, index) => (
+    <motion.span
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.10, duration: 1.2 }}
+      className=" text-[#a3e4ff]"
+    >
+      {char}
+    </motion.span>
+  ))}
+</h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
