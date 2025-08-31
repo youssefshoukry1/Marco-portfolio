@@ -3,7 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Projects from "./Projects/page";
-
+import Contact from "./Contact/page";
+import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 export default function Home() {
   return (
       <>
@@ -78,18 +80,18 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.5 }}
         className="relative flex justify-center items-center flex-col text-center z-10"
       >
-        <h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide">
-          Marco Zakaria{" "}
-          <span className="text-[#a3e4ff]">Photograph</span>
-        </h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="lg:text-2xl text-lg mt-3 text-gray-300"
-        >
-          Food & Products & Advertising
-        </motion.p>
+<h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide">
+  Hey, I'm <span className="text-[#a3e4ff]">Marco Zakaria</span>
+</h1>
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 1 }}
+  className="lg:text-2xl text-lg mt-3 text-gray-300"
+>
+  Professional Photographer | Food · Products · Advertising
+</motion.p>
+
 
         {/* خط موجي */}
         <motion.div className="absolute -bottom-7 left-1/2 -translate-x-1/2 w-[280px] h-[25px] overflow-hidden rounded-full">
@@ -112,10 +114,32 @@ export default function Home() {
             }}
           />
         </motion.div>
+
+          {/* السوشيال ميديا */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                className="flex gap-6 mt-8 text-2xl z-10"
+              >
+                <a href="https://instagram.com" target="_blank" className="text-pink-400 hover:scale-110 transition-transform">
+                  <FaInstagram />
+                </a>
+                <a href="mailto:example@gmail.com" className="text-red-400 hover:scale-110 transition-transform">
+                  <SiGmail />
+                </a>
+                <a href="https://wa.me/201204470794" target="_blank" className="text-green-400 hover:scale-110 transition-transform">
+                  <FaWhatsapp />
+                </a>
+                <a href="https://facebook.com" target="_blank" className="text-blue-400 hover:scale-110 transition-transform">
+                  <FaFacebook />
+                </a>
+              </motion.div>
       </motion.div>
     </section>
     <Projects/>
-  
+
+<Contact/>
     
     </>
   );

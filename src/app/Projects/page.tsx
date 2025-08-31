@@ -108,13 +108,13 @@ export default function Projects() {
   transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
   viewport={{ once: true }}
   className="relative w-[310px] h-[310px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] 
-             mx-auto flex items-center justify-center"
+             mx-auto flex items-center justify-center rounded-2xl"
 >
   <Image
     src={card.img}
     alt={`Project ${index}`}
     fill
-    className="object-contain"
+    className="object-contain rounded-2xl"
   />
 </motion.div>
 
