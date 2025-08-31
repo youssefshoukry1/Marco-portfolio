@@ -81,7 +81,8 @@ export default function Home() {
         className="relative flex justify-center items-center flex-col text-center z-10"
       >
 <h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide">
-  Hey, I'm <span className="text-[#a3e4ff]">Marco Zakaria</span>
+  
+  { "Hey, I'm" } <span className="text-[#a3e4ff]">Marco Zakaria</span>
 </h1>
 <motion.p
   initial={{ opacity: 0, y: 20 }}
