@@ -7,7 +7,7 @@ import { SiGmail } from "react-icons/si";
 export default function Contact() {
   return (
     <section
-      id="contact"
+      id="Contact"
       className="relative min-h-screen w-full flex flex-col justify-center items-center px-6 py-16 bg-gradient-to-br from-[#1f1f1f] via-[#2b2b2b] to-[#3a3a3a] overflow-hidden"
     >
       {/* خلفية متحركة (فقاعات) */}

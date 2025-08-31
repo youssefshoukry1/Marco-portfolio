@@ -9,7 +9,7 @@ import { SiGmail } from "react-icons/si";
 export default function Home() {
   return (
       <>
-    <section className="relative h-screen w-full flex justify-center items-center flex-col lg:flex-row gap-14 px-6 overflow-hidden bg-gradient-to-br from-[#1f1f1f] via-[#2b2b2b] to-[#3a3a3a]">
+    <section id="Home" className="relative h-screen w-full flex justify-center items-center flex-col lg:flex-row gap-14 px-6 overflow-hidden bg-gradient-to-br from-[#1f1f1f] via-[#2b2b2b] to-[#3a3a3a]">
       
       {/* خلفية متحركة (فقاعات + بلور) */}
       <div className="absolute inset-0 overflow-hidden">

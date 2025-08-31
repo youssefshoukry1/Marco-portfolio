@@ -30,7 +30,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#1f1f1f] via-[#2b2b2b] to-[#3a3a3a]">
+    <section id="Projects" className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-gradient-to-br from-[#1f1f1f] via-[#2b2b2b] to-[#3a3a3a]">
       
       {/* خلفية متحركة (فقاعات) */}
       <div className="absolute inset-0 overflow-hidden">

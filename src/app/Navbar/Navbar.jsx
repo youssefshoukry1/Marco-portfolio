@@ -5,9 +5,8 @@ import { motion as Motion } from "framer-motion";
 export default function Navbar() {
   const navItem = [
     { name: "Home", id: "Home" },
-    { name: "About", id: "About" },
-    { name: "Projects", id: "projects" },
-    { name: "Contact", id: "contact" },
+    { name: "Projects", id: "Projects" },
+    { name: "Contact", id: "Contact" },
   ];
 
   const [active, setActive] = useState("Home");
