@@ -71,10 +71,26 @@ export default function Projects() {
 
       {/* Swiper */}
       <Swiper
+
+  grabCursor
+  speed={700}
         modules={[Pagination, Navigation]}
-        grabCursor={true}
+
+    breakpoints={{
+    320: { slidesPerView: 1.2, spaceBetween: -50 },
+    480: { slidesPerView: 2, spaceBetween: -60 },
+    768: { slidesPerView: 2, spaceBetween: -20 },
+    1024: { slidesPerView: 2, spaceBetween: 0 },
+    1280: { slidesPerView: 2, spaceBetween: 0 },
+  }}
         centeredSlides={true}
-        slidesPerView={1}
+          coverflowEffect={{
+
+    stretch: 30,
+    depth: 600,
+    modifier: 1.5,
+    slideShadows: true,
+  }}
         pagination={{ clickable: true, dynamicBullets: true }}
         navigation={{ enabled: true }}
         className="w-full max-w-6xl z-10"
