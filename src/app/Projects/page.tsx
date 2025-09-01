@@ -70,47 +70,46 @@ export default function Projects() {
       </motion.h2>
 
       {/* Swiper */}
-      <Swiper
-
+  <Swiper
   grabCursor
   speed={700}
-        modules={[Pagination, Navigation]}
-
-    breakpoints={{
-    320: { slidesPerView: 1.2, spaceBetween: -50 },
-    480: { slidesPerView: 2, spaceBetween: -60 },
-    768: { slidesPerView: 2, spaceBetween: -20 },
-    1024: { slidesPerView: 2, spaceBetween: 0 },
-    1280: { slidesPerView: 2, spaceBetween: 0 },
+  modules={[Pagination, Navigation]}
+  breakpoints={{
+    320: { slidesPerView: 1.2, spaceBetween: -55 },  // ✅ صورة أساسية + جزء من اللي بعدها
+    480: { slidesPerView: 1.3, spaceBetween: -55 }, // ✅ صورة أكبر + جزء من اللي بعدها
+    768: { slidesPerView: 2, spaceBetween: -55 },
+    1024: { slidesPerView: 2, spaceBetween: 30 },
+    1280: { slidesPerView: 2, spaceBetween: 40 },
   }}
-        centeredSlides={true}
-          coverflowEffect={{
-
+  centeredSlides={true}
+  coverflowEffect={{
     stretch: 30,
     depth: 600,
     modifier: 1.5,
     slideShadows: true,
   }}
-        pagination={{ clickable: true, dynamicBullets: true }}
-        navigation={{ enabled: true }}
-        className="w-full max-w-6xl z-10"
-      >
+  pagination={{ clickable: true, dynamicBullets: true }}
+  navigation={{ enabled: true }}
+  className="w-full max-w-6xl z-10"
+>
+
         {projects.map((card, index) => (
           <SwiperSlide key={index}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: true }}
-              className="relative w-[310px] h-[310px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] mx-auto flex items-center justify-center rounded-2xl"
-            >
-              <Image
-                src={card.img}
-                alt={`Project ${index}`}
-                fill
-                className="object-contain rounded-2xl"
-              />
-            </motion.div>
+          <motion.div
+  initial={{ opacity: 0, scale: 0.85 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className="relative w-[260px] h-[320px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl"
+>
+  <Image
+    src={card.img}
+    alt={`Project ${index}`}
+fill
+    className="object-contain w-full h-full rounded-2xl"
+  />
+</motion.div>
+
           </SwiperSlide>
         ))}
       </Swiper>
