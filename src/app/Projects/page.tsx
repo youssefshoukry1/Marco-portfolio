@@ -100,7 +100,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.4,
-                delay: index * 0.3,
+                delay: index * 0.1,
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
@@ -111,7 +111,7 @@ export default function Projects() {
   alt={`Project ${index}`}
   width={420}
   height={480}
-   priority={index < 0} 
+   priority={index < 1} 
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
 
