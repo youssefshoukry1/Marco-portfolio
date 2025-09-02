@@ -18,8 +18,6 @@ const projects = [
         { img: "/img (13).webp" }, 
           { img: "/img (2).webp" },
             { img: "/img (11).webp" }, 
-              { img: "/img (11).webp" }, 
-
   { img: "/img (4).webp" },
   { img: "/img (5).webp" }, 
   { img: "/img (6).webp" },
@@ -116,12 +114,15 @@ export default function Projects() {
               viewport={{ once: true }}
               className="relative group w-[260px] h-[320px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent  hover:from-violet-500/20 hover:to-cyan-500/20 transition-all duration-500"
             >
-              <Image
-                src={card.img}
-                alt={`Project ${index}`}
-                fill
-                className="object-contain w-full h-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
-              />
+            <Image
+  src={card.img}
+  alt={`Project ${index}`}
+  width={420}
+  height={480}
+  
+  className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+/>
+
             </motion.div>
           </SwiperSlide>
         ))}
