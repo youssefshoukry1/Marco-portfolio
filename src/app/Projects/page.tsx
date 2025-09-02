@@ -20,7 +20,10 @@ const projects = [
           { img: "/img (2).webp" },
             { img: "/img (11).webp" }, 
               { img: "/img (8).webp" },
+
 ];
+
+
 
 export default function Projects() {
   return (
@@ -57,13 +60,7 @@ export default function Projects() {
           transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
           style={{ bottom: "10%", right: "10%" }}
         />
-        <motion.div
-          className="absolute w-64 h-64 rounded-full blur-2xl 
-          bg-gradient-to-bl from-teal-300/20 to-violet-400/15 mix-blend-screen"
-          animate={{ x: [0, 70, -70, 0], y: [0, -60, 60, 0], scale: [1, 1.1, 0.9, 1] }}
-          transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-          style={{ bottom: "20%", left: "15%" }}
-        />
+
       </div>
 
 
@@ -80,8 +77,9 @@ export default function Projects() {
 
       {/* Swiper */}
       <Swiper
+      
         grabCursor
-        speed={700}
+        speed={600}
         modules={[Pagination, Navigation]}
         breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: -55 },
@@ -102,7 +100,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 0.4,
-                delay: index * 0.1,
+                delay: index * 0.3,
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
@@ -113,7 +111,7 @@ export default function Projects() {
   alt={`Project ${index}`}
   width={420}
   height={480}
-   priority={index === 0} 
+   priority={index < 0} 
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
 
