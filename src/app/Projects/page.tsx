@@ -82,9 +82,9 @@ export default function Projects() {
         speed={600}
         modules={[Pagination, Navigation]}
         breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -25 },
-          480: { slidesPerView: 1.3, spaceBetween: -25 },
-          768: { slidesPerView: 2, spaceBetween: -25 },
+          320: { slidesPerView: 1.2, spaceBetween: -30 },
+          480: { slidesPerView: 1.3, spaceBetween: -30 },
+          768: { slidesPerView: 2, spaceBetween: -30 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
           1280: { slidesPerView: 2, spaceBetween: 40 },
         }}
@@ -104,7 +104,7 @@ export default function Projects() {
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
-              className="relative group w-[260px] h-[320px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent  hover:from-violet-500/20 hover:to-cyan-500/20 transition-all duration-500"
+              className="relative group w-[250px] h-[310px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
             <Image
   src={card.img}
