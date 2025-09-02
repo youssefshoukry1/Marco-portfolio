@@ -119,7 +119,7 @@ export default function Projects() {
   alt={`Project ${index}`}
   width={420}
   height={480}
-  
+   priority={index === 0} 
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
 
