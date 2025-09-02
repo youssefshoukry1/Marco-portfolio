@@ -96,13 +96,7 @@ export default function Projects() {
         {projects.map((card, index) => (
           <SwiperSlide key={index}>
             <motion.div
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-                ease: "easeOut",
-              }}
+            
               viewport={{ once: true }}
               className="relative group w-[250px] h-[310px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
