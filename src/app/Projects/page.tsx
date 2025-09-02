@@ -82,9 +82,9 @@ export default function Projects() {
         speed={600}
         modules={[Pagination, Navigation]}
         breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -55 },
-          480: { slidesPerView: 1.3, spaceBetween: -55 },
-          768: { slidesPerView: 2, spaceBetween: -55 },
+          320: { slidesPerView: 1.2, spaceBetween: -25 },
+          480: { slidesPerView: 1.3, spaceBetween: -25 },
+          768: { slidesPerView: 2, spaceBetween: -25 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
           1280: { slidesPerView: 2, spaceBetween: 40 },
         }}
@@ -109,9 +109,9 @@ export default function Projects() {
             <Image
   src={card.img}
   alt={`Project ${index}`}
-  width={420}
-  height={480}
-   priority={index < 1} 
+  width={290}
+  height={440}
+   priority={index < 2} 
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
 
