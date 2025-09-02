@@ -33,10 +33,10 @@ export default function Home() {
           }}
         />
 
-        {/* 🔹 فقاعات متحركة */}
+        
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute w-80 h-80 rounded-full blur-3xl 
+            className="absolute w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 rounded-full blur-3xl 
             bg-gradient-to-br from-cyan-400/30 to-blue-500/20 mix-blend-screen"
             animate={{
               x: [0, 120, -120, 0],
@@ -52,7 +52,7 @@ export default function Home() {
           />
 
           <motion.div
-            className="absolute w-96 h-96 rounded-full blur-3xl 
+            className="absolute w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 rounded-full blur-3xl 
             bg-gradient-to-tr from-purple-400/25 to-blue-300/15 mix-blend-screen"
             animate={{
               x: [0, -140, 100, 0],
@@ -68,7 +68,7 @@ export default function Home() {
           />
 
           <motion.div
-            className="absolute w-64 h-64 rounded-full blur-2xl 
+            className="absolute  w-48 h-48 sm:w-64 sm:h-64 lg:w-64 lg:h-6 rounded-full blur-2xl 
             bg-gradient-to-bl from-cyan-300/20 to-teal-400/15 mix-blend-screen"
             animate={{
               x: [0, 70, -70, 0],
@@ -84,56 +84,6 @@ export default function Home() {
           />
         </div>
 
-        {/* 🔹 فقاعات متحركة */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute w-80 h-80 rounded-full blur-3xl 
-            bg-gradient-to-br from-cyan-400/30 to-blue-500/20 mix-blend-screen"
-            animate={{
-              x: [0, 120, -120, 0],
-              y: [0, -100, 80, 0],
-              scale: [1, 1.15, 0.9, 1],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ top: "10%", left: "15%" }}
-          />
-
-          <motion.div
-            className="absolute w-96 h-96 rounded-full blur-3xl 
-            bg-gradient-to-tr from-purple-400/25 to-pink-400/15 mix-blend-screen"
-            animate={{
-              x: [0, -140, 100, 0],
-              y: [0, 90, -100, 0],
-              scale: [1, 1.2, 0.85, 1],
-            }}
-            transition={{
-              duration: 28,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ bottom: "5%", right: "8%" }}
-          />
-
-          <motion.div
-            className="absolute w-64 h-64 rounded-full blur-2xl 
-            bg-gradient-to-bl from-cyan-300/20 to-teal-400/15 mix-blend-screen"
-            animate={{
-              x: [0, 70, -70, 0],
-              y: [0, -60, 60, 0],
-              scale: [1, 1.1, 0.9, 1],
-            }}
-            transition={{
-              duration: 22,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ bottom: "15%", left: "18%" }}
-          />
-        </div>
 {/* صورة مع شادو محسّن */}
 <motion.div
   initial={{ opacity: 0, scale: 0.85 }}
@@ -161,20 +111,25 @@ export default function Home() {
           transition={{ duration: 1, delay: 0.5 }}
           className="relative flex justify-center items-center flex-col text-center z-10"
         >
-<h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide">
+<h1 className="lg:text-5xl text-3xl text-gray-100 font-bold tracking-wide flex flex-wrap justify-center">
   {"Hey, "} {/* ثابت */}
   {Array.from("I'm Marco Zakaria").map((char, index) => (
     <motion.span
       key={index}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.10, duration: 1.2 }}
-      className=" text-[#a3e4ff]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        delay: index * 0.11, // سرعة الكتابة
+        duration: 0.6,
+      }}
+      className="text-[#a3e4ff] inline-block"
     >
-      {char}
+      {char === " " ? "\u00A0" : char} {/* عشان المسافات تبان */}
     </motion.span>
   ))}
+
 </h1>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

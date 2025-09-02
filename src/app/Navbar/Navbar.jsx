@@ -28,16 +28,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // نفس تأثير الـHome
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1, 
-      transition: { 
-        staggerChildren: 0.15,
-        duration: 0.8,
-        ease: "easeOut"
-      } 
+      transition: { staggerChildren: 0.15, duration: 0.8, ease: "easeOut" } 
     },
   };
 
@@ -53,7 +48,21 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#1a1c24]/80 shadow-lg border-b border-cyan-400/20">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        {/* 🔹 اللوجو (Portfolio) */}
+        <Motion.h1
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-xl sm:text-2xl font-extrabold tracking-wide 
+          bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-400 
+          text-transparent bg-clip-text drop-shadow-lg cursor-pointer"
+        >
+          Portfolio
+        </Motion.h1>
+
+        {/* 🔹 اللينكات */}
         <Motion.ul
           className="flex gap-6 sm:gap-10 tracking-wide"
           variants={containerVariants}
