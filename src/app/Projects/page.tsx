@@ -109,8 +109,8 @@ export default function Projects() {
             <Image
   src={card.img}
   alt={`Project ${index}`}
-  width={290}
-  height={440}
+  width={270}
+  height={420}
    priority={index < 2} 
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
