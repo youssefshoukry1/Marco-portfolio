@@ -43,7 +43,7 @@ export default function Projects() {
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute w-72 h-72 rounded-full blur-3xl 
-          bg-gradient-to-br from-cyan-300/25 to-cyan-400/20 mix-blend-screen"
+          bg-gradient-to-br from-cyan-300/25 to-blue-500/20 mix-blend-screen"
           animate={{ x: [0, 120, -100, 0], y: [0, -80, 60, 0], scale: [1, 1.1, 0.9, 1] }}
           transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
           style={{ top: "12%", left: "20%" }}
