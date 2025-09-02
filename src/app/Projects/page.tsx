@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 const projects = [
   { img: "/img (18).webp" },
   { img: "/img (19).webp" }, 
+  { img: "/img (9).webp" },
   { img: "/img (16).webp" },
   { img: "/img (1).webp" },
     { img: "/img (15).webp" }, 
@@ -18,14 +19,7 @@ const projects = [
         { img: "/img (13).webp" }, 
           { img: "/img (2).webp" },
             { img: "/img (11).webp" }, 
-  { img: "/img (4).webp" },
-  { img: "/img (5).webp" }, 
-  { img: "/img (6).webp" },
-  { img: "/img (7).webp" }, 
-  { img: "/img (8).webp" },
-   { img: "/img (10).webp" },
-  { img: "/img (14).webp" },  
-  { img: "/img (17).webp" },
+              { img: "/img (8).webp" },
 ];
 
 export default function Projects() {
