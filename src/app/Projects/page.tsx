@@ -100,7 +100,7 @@ export default function Projects() {
             <motion.div
             
               viewport={{ once: true }}
-              className="relative group w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
             <Image
   src={card.img}
@@ -140,7 +140,7 @@ export default function Projects() {
             <motion.div
             
               viewport={{ once: true }}
-              className="relative group  w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group  w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
             <Image
   src={card2.img}
