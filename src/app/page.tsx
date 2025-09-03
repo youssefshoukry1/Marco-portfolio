@@ -124,10 +124,6 @@ export default function Home() {
     icon: <FaWhatsapp />,
     color: "text-green-400",
     link: "https://wa.me/+201284504065"
-  },{
-    icon: <FaFacebook />,
-    color: "text-blue-400",
-    link: "https://www.facebook.com/marko.migo?mibextid=ZbWKwL"
   }].map((item, idx) => (
     <a
       key={idx}
