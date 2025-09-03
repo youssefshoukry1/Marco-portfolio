@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[#0a0f1f] border-t border-cyan-400/20 py-6 overflow-hidden">
+    <footer className="relative w-full bg-[#0a0f1f] border-t border-cyan-400/20 py-7  overflow-hidden">
       {/* 🔹 فقاعة خفيفة متحركة */}
       <motion.div
         className="absolute w-40 h-40 rounded-full blur-3xl bg-gradient-to-br from-cyan-400/20 to-blue-500/10 mix-blend-screen"
