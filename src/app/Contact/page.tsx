@@ -59,7 +59,7 @@ export default function Contact() {
         <div className="flex flex-col justify-center gap-8 text-gray-200">
           <h2 className="text-3xl font-bold text-[#a3e4ff]">Contact Me</h2>
           <p className="text-gray-400 leading-relaxed">
-            I'm open for collaboration, freelance projects, or just a friendly chat.
+            {"I'm "}open for collaboration, freelance projects, or just a friendly chat.
             Feel free to reach out through the form or connect with me directly on social media.
           </p>
 
