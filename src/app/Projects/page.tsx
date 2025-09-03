@@ -14,18 +14,14 @@ const projects = [
   { img: "/img (1).webp" },
       { img: "/img (12).webp" },
           { img: "/img (2).webp" },
-];
-
-const projects2 = [
-
-  { img: "/img (19).webp" }, 
+            { img: "/img (19).webp" }, 
     { img: "/img (15).webp" },
       { img: "/img (16).webp" }, 
         { img: "/img (13).webp" }, 
             { img: "/img (11).webp" }, 
               { img: "/img (8).webp" },
-
 ];
+
 
 
 export default function Projects() {
@@ -65,8 +61,7 @@ export default function Projects() {
         />
 
       </div>
-
-
+      
       {/* العنوان */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
@@ -79,11 +74,10 @@ export default function Projects() {
       </motion.h2>
       {/* Swiper */}
       <Swiper
-      
         grabCursor
         speed={700}
         modules={[Pagination, Navigation]}
-         breakpoints={{
+        breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: -55 },
           480: { slidesPerView: 1.3, spaceBetween: -55 },
           768: { slidesPerView: 2, spaceBetween: -55 },
@@ -114,9 +108,9 @@ export default function Projects() {
   width={420}
   height={480}
   sizes="(max-width: 640px) 210px,
-         (max-width: 768px) 300px,
-         (max-width: 1024px) 350px,
-         480px"
+          (max-width: 768px) 300px,
+          (max-width: 1024px) 350px,
+          480px"
   priority={index < 2}
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
@@ -129,54 +123,6 @@ export default function Projects() {
 
 
 
-            <Swiper
-      
-        grabCursor
-        speed={700}
-        modules={[Pagination, Navigation]}
-         breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -55 },
-          480: { slidesPerView: 1.3, spaceBetween: -55 },
-          768: { slidesPerView: 2, spaceBetween: -55 },
-          1024: { slidesPerView: 2, spaceBetween: 30 },
-          1280: { slidesPerView: 2, spaceBetween: 40 },
-        }}
-        centeredSlides={true}
-        pagination={{ clickable: true, dynamicBullets: true }}
-        navigation={{ enabled: true }}
-        className="w-full max-w-6xl z-10"
-      >
-        {projects2.map((card2, index) => (
-          <SwiperSlide key={index}>
-            <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true }}
-              className="relative group w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
-            >
-          <Image
-  src={card2.img}
-  alt={`Project ${index}`}
-  width={420}
-  height={480}
- sizes="(max-width: 640px) 210px,
-         (max-width: 768px) 300px,
-         (max-width: 1024px) 350px,
-         480px"
-  priority={index < 2}
-  className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
-/>
-
-
-            </motion.div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
 
       
       {/* تخصيص Pagination + Navigation */}
