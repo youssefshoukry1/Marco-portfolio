@@ -83,10 +83,10 @@ export default function Projects() {
         grabCursor
         speed={700}
         modules={[Pagination, Navigation]}
-        breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -35 },
-          480: { slidesPerView: 1.3, spaceBetween: -35 },
-          768: { slidesPerView: 2, spaceBetween: -35 },
+         breakpoints={{
+          320: { slidesPerView: 1.2, spaceBetween: -55 },
+          480: { slidesPerView: 1.3, spaceBetween: -55 },
+          768: { slidesPerView: 2, spaceBetween: -55 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
           1280: { slidesPerView: 2, spaceBetween: 40 },
         }}
@@ -129,9 +129,9 @@ export default function Projects() {
         speed={700}
         modules={[Pagination, Navigation]}
          breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -35 },
-          480: { slidesPerView: 1.3, spaceBetween: -35 },
-          768: { slidesPerView: 2, spaceBetween: -35 },
+          320: { slidesPerView: 1.2, spaceBetween: -55 },
+          480: { slidesPerView: 1.3, spaceBetween: -55 },
+          768: { slidesPerView: 2, spaceBetween: -55 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
           1280: { slidesPerView: 2, spaceBetween: 40 },
         }}
