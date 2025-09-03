@@ -32,7 +32,7 @@ export default function Projects() {
   return (
     <section
       id="Projects"
-      className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f] lg:gap-0 gap-6"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f] lg:gap-9 gap-6"
     >
   
          {/* خلفية متحركة */}
@@ -81,12 +81,12 @@ export default function Projects() {
       <Swiper
       
         grabCursor
-        speed={600}
+        speed={700}
         modules={[Pagination, Navigation]}
         breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -30 },
-          480: { slidesPerView: 1.3, spaceBetween: -30 },
-          768: { slidesPerView: 2, spaceBetween: -30 },
+          320: { slidesPerView: 1.2, spaceBetween: -35 },
+          480: { slidesPerView: 1.3, spaceBetween: -35 },
+          768: { slidesPerView: 2, spaceBetween: -35 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
           1280: { slidesPerView: 2, spaceBetween: 40 },
         }}
@@ -100,16 +100,21 @@ export default function Projects() {
             <motion.div
             
               viewport={{ once: true }}
-              className="relative group w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
-            <Image
+          <Image
   src={card.img}
   alt={`Project ${index}`}
-  width={270}
-  height={420}
-   priority={index < 2} 
+  width={420}
+  height={480}
+  sizes="(max-width: 640px) 230px,
+         (max-width: 768px) 300px,
+         (max-width: 1024px) 350px,
+         480px"
+  priority={index < 2}
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
+
 
             </motion.div>
           </SwiperSlide>
@@ -121,12 +126,12 @@ export default function Projects() {
             <Swiper
       
         grabCursor
-        speed={600}
+        speed={700}
         modules={[Pagination, Navigation]}
-        breakpoints={{
-          320: { slidesPerView: 1.2, spaceBetween: -30 },
-          480: { slidesPerView: 1.3, spaceBetween: -30 },
-          768: { slidesPerView: 2, spaceBetween: -30 },
+         breakpoints={{
+          320: { slidesPerView: 1.2, spaceBetween: -35 },
+          480: { slidesPerView: 1.3, spaceBetween: -35 },
+          768: { slidesPerView: 2, spaceBetween: -35 },
           1024: { slidesPerView: 2, spaceBetween: 30 },
           1280: { slidesPerView: 2, spaceBetween: 40 },
         }}
@@ -140,16 +145,21 @@ export default function Projects() {
             <motion.div
             
               viewport={{ once: true }}
-              className="relative group  w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
-            <Image
+          <Image
   src={card2.img}
   alt={`Project ${index}`}
-  width={270}
-  height={420}
-   priority={index < 2} 
+  width={420}
+  height={480}
+ sizes="(max-width: 640px) 230px,
+         (max-width: 768px) 300px,
+         (max-width: 1024px) 350px,
+         480px"
+  priority={index < 2}
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
+
 
             </motion.div>
           </SwiperSlide>
