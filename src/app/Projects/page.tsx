@@ -81,7 +81,7 @@ export default function Projects() {
       <Swiper
       
         grabCursor
-        speed={700}
+        speed={800}
         modules={[Pagination, Navigation]}
          breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: -55 },
@@ -98,7 +98,13 @@ export default function Projects() {
         {projects.map((card, index) => (
           <SwiperSlide key={index}>
             <motion.div
-            
+            initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
               viewport={{ once: true }}
               className="relative group w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
@@ -126,7 +132,7 @@ export default function Projects() {
             <Swiper
       
         grabCursor
-        speed={400}
+        speed={800}
         modules={[Pagination, Navigation]}
          breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: -55 },
@@ -143,7 +149,13 @@ export default function Projects() {
         {projects2.map((card2, index) => (
           <SwiperSlide key={index}>
             <motion.div
-            
+            initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
               viewport={{ once: true }}
               className="relative group w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
