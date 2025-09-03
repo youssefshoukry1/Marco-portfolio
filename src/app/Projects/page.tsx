@@ -81,7 +81,7 @@ export default function Projects() {
       <Swiper
       
         grabCursor
-        speed={800}
+        speed={600}
         modules={[Pagination, Navigation]}
          breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: -55 },
@@ -132,7 +132,7 @@ export default function Projects() {
             <Swiper
       
         grabCursor
-        speed={800}
+        speed={700}
         modules={[Pagination, Navigation]}
          breakpoints={{
           320: { slidesPerView: 1.2, spaceBetween: -55 },
