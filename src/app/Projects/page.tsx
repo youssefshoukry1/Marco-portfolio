@@ -61,7 +61,7 @@ export default function Projects() {
         />
 
       </div>
-      
+
       {/* العنوان */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
@@ -100,7 +100,7 @@ export default function Projects() {
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
-              className="relative group w-[210px] h-[270px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
           <Image
   src={card.img}
