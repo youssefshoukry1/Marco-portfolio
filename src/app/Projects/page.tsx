@@ -9,15 +9,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projects = [
+  { img: "/img (19).webp" },
   { img: "/img (18).webp" },
-  { img: "/img (9).webp" },
-  { img: "/img (1).webp" },
-      { img: "/img (12).webp" },
+    { img: "/img (9).webp" },
+          { img: "/img (16).webp" }, 
+            { img: "/img (1).webp" },
+                { img: "/img (15).webp" },
+                                { img: "/img (14).webp" },
+                                        { img: "/img (13).webp" }, 
+                                        { img: "/img (12).webp" },
           { img: "/img (2).webp" },
-            { img: "/img (19).webp" }, 
-    { img: "/img (15).webp" },
-      { img: "/img (16).webp" }, 
-        { img: "/img (13).webp" }, 
+          
             { img: "/img (11).webp" }, 
               { img: "/img (8).webp" },
 ];
@@ -29,36 +31,21 @@ export default function Projects() {
     <section
       id="Projects"
       className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f] lg:gap-9 gap-6"
-    >
-         {/* خلفية متحركة */}
-      <motion.div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(120deg, rgba(0,200,180,0.08), rgba(163,228,255,0.05), rgba(180,0,255,0.08))",
-          backgroundSize: "300% 300%",
-        }}
-        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
-      />
-      {/* فقاعات متحركة */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute w-72 h-72 rounded-full blur-3xl 
-          bg-gradient-to-br from-cyan-300/25 to-blue-500/20 mix-blend-screen"
-          animate={{ x: [0, 120, -100, 0], y: [0, -80, 60, 0], scale: [1, 1.1, 0.9, 1] }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
-          style={{ top: "12%", left: "20%" }}
-        />
-        <motion.div
-          className="absolute w-96 h-96 rounded-full blur-3xl 
-          bg-gradient-to-tr from-purple-400/20 to-cyan-300/15 mix-blend-screen"
-          animate={{ x: [0, -140, 100, 0], y: [0, 100, -90, 0], scale: [1, 1.15, 0.85, 1] }}
-          transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-          style={{ bottom: "10%", right: "10%" }}
-        />
+    ><div className="absolute inset-0">
+  {/* خلفية جريدينت ثابتة */}
+  <div
+    className="absolute inset-0"
+    style={{
+      background: `
+        radial-gradient(circle at 15% 20%, rgba(0,120,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(180,0,255,0.08), transparent 60%),
+        radial-gradient(circle at 30% 85%, rgba(163,228,255,0.1), transparent 70%)
+      `,
+      backgroundColor: "#0f0f0f", // أو أي لون أساسي
+    }}
+  />
+</div>
 
-      </div>
 
       {/* العنوان */}
       <motion.h2

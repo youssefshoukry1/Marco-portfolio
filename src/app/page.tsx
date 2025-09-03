@@ -11,79 +11,21 @@ export default function Home() {
   return (
     <>
       <section
-        id="Home"
-        className="relative h-screen w-full flex justify-center items-center flex-col lg:flex-row gap-14 px-6 overflow-hidden 
-        bg-[#0f0f0f]"
-      >
-        {/* 🔹 خلفية متحركة (gradient cinematic) */}
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(120deg, rgba(0,120,255,0.15), rgba(163,228,255,0.1), rgba(128,0,255,0.15))",
-            backgroundSize: "300% 300%",
-          }}
-          animate={{
-            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute w-40 h-40 sm:w-56 sm:h-56 lg:w-80 lg:h-80 rounded-full blur-3xl 
-            bg-gradient-to-br from-cyan-400/30 to-blue-500/20 mix-blend-screen"
-            animate={{
-              x: [0, 120, -120, 0],
-              y: [0, -100, 80, 0],
-              scale: [1, 1.15, 0.9, 1],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ top: "10%", left: "15%" }}
-          />
-
-          <motion.div
-            className="absolute w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 rounded-full blur-3xl 
-            bg-gradient-to-tr from-purple-400/25 to-blue-300/15 mix-blend-screen"
-            animate={{
-              x: [0, -140, 100, 0],
-              y: [0, 90, -100, 0],
-              scale: [1, 1.2, 0.85, 1],
-            }}
-            transition={{
-              duration: 28,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ bottom: "5%", right: "8%" }}
-          />
-
-          <motion.div
-            className="absolute  w-48 h-48 sm:w-64 sm:h-64 lg:w-64 lg:h-6 rounded-full blur-2xl 
-            bg-gradient-to-bl from-cyan-300/20 to-teal-400/15 mix-blend-screen"
-            animate={{
-              x: [0, 70, -70, 0],
-              y: [0, -60, 60, 0],
-              scale: [1, 1.1, 0.9, 1],
-            }}
-            transition={{
-              duration: 22,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            style={{ bottom: "15%", left: "18%" }}
-          />
-        </div>
-
+  id="Home"
+  className="relative h-screen w-full flex justify-center items-center flex-col lg:flex-row gap-14 px-6 overflow-hidden bg-[#0f0f0f]"
+>
+  {/* 🔹 خلفية ثابتة (شبه الفقاعات القديمة) */}
+  <div
+    className="absolute inset-0"
+    style={{
+      background: `
+        radial-gradient(circle at 15% 20%, rgba(0,120,255,0.15), transparent 60%),
+        radial-gradient(circle at 85% 75%, rgba(128,0,255,0.15), transparent 65%),
+        radial-gradient(circle at 30% 85%, rgba(163,228,255,0.1), transparent 70%)
+      `,
+      backgroundColor: "#0f0f0f", // نفس اللون الأساسي اللي عندك
+    }}
+  />
 {/* صورة مع شادو محسّن */}
 <motion.div
   initial={{ opacity: 0, scale: 0.85 }}
