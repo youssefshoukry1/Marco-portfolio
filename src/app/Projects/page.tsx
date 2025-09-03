@@ -30,7 +30,6 @@ export default function Projects() {
       id="Projects"
       className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f] lg:gap-9 gap-6"
     >
-  
          {/* خلفية متحركة */}
       <motion.div
         className="absolute inset-0"
@@ -42,7 +41,6 @@ export default function Projects() {
         animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
         transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
       />
-
       {/* فقاعات متحركة */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -114,16 +112,10 @@ export default function Projects() {
   priority={index < 2}
   className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
 />
-
-
             </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
-
-
-
-
       
       {/* تخصيص Pagination + Navigation */}
       <style jsx global>{`
