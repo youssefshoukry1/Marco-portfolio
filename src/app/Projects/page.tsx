@@ -100,14 +100,14 @@ export default function Projects() {
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
-              className="relative group w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group w-[250px] h-[310px] sm:w-[300px] sm:h-[360px] md:w-[350px] md:h-[410px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
           <Image
   src={card.img}
   alt={`Project ${index}`}
   width={420}
   height={480}
-  sizes="(max-width: 640px) 210px,
+  sizes="(max-width: 640px) 250px,
           (max-width: 768px) 300px,
           (max-width: 1024px) 350px,
           480px"
