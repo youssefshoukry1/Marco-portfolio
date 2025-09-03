@@ -9,19 +9,18 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const projects = [
-  { img: "/img (19).webp" },
   { img: "/img (18).webp" },
+  { img: "/img (19).webp" },
     { img: "/img (9).webp" },
           { img: "/img (16).webp" }, 
             { img: "/img (1).webp" },
                 { img: "/img (15).webp" },
-                                { img: "/img (14).webp" },
-                                        { img: "/img (13).webp" }, 
-                                        { img: "/img (12).webp" },
+          { img: "/img (12).webp" },
+              { img: "/img (13).webp" }, 
           { img: "/img (2).webp" },
-          
             { img: "/img (11).webp" }, 
               { img: "/img (8).webp" },
+          
 ];
 
 
