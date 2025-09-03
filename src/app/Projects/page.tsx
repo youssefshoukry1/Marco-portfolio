@@ -10,26 +10,29 @@ import { motion } from "framer-motion";
 
 const projects = [
   { img: "/img (18).webp" },
-  { img: "/img (19).webp" }, 
   { img: "/img (9).webp" },
-  { img: "/img (16).webp" },
   { img: "/img (1).webp" },
-    { img: "/img (15).webp" }, 
       { img: "/img (12).webp" },
-        { img: "/img (13).webp" }, 
           { img: "/img (2).webp" },
+];
+
+const projects2 = [
+
+  { img: "/img (19).webp" }, 
+    { img: "/img (15).webp" },
+      { img: "/img (16).webp" }, 
+        { img: "/img (13).webp" }, 
             { img: "/img (11).webp" }, 
               { img: "/img (8).webp" },
 
 ];
 
 
-
 export default function Projects() {
   return (
     <section
       id="Projects"
-      className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f]"
+      className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#0f0f0f] lg:gap-0 gap-6"
     >
   
          {/* خلفية متحركة */}
@@ -74,7 +77,6 @@ export default function Projects() {
       >
         Projects
       </motion.h2>
-
       {/* Swiper */}
       <Swiper
       
@@ -98,10 +100,50 @@ export default function Projects() {
             <motion.div
             
               viewport={{ once: true }}
-              className="relative group w-[250px] h-[310px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+              className="relative group w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
             >
             <Image
   src={card.img}
+  alt={`Project ${index}`}
+  width={270}
+  height={420}
+   priority={index < 2} 
+  className="object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+/>
+
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+
+
+            <Swiper
+      
+        grabCursor
+        speed={600}
+        modules={[Pagination, Navigation]}
+        breakpoints={{
+          320: { slidesPerView: 1.2, spaceBetween: -30 },
+          480: { slidesPerView: 1.3, spaceBetween: -30 },
+          768: { slidesPerView: 2, spaceBetween: -30 },
+          1024: { slidesPerView: 2, spaceBetween: 30 },
+          1280: { slidesPerView: 2, spaceBetween: 40 },
+        }}
+        centeredSlides={true}
+        pagination={{ clickable: true, dynamicBullets: true }}
+        navigation={{ enabled: true }}
+        className="w-full max-w-6xl z-10"
+      >
+        {projects2.map((card2, index) => (
+          <SwiperSlide key={index}>
+            <motion.div
+            
+              viewport={{ once: true }}
+              className="relative group  w-[230px] h-[290px] sm:w-[300px] sm:h-[360px] md:w-[420px] md:h-[480px] mx-auto flex items-center justify-center rounded-2xl overflow-hidden border border-transparent transition-all duration-500"
+            >
+            <Image
+  src={card2.img}
   alt={`Project ${index}`}
   width={270}
   height={420}
