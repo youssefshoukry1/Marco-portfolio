@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 export default function Contact() {
@@ -26,7 +26,9 @@ export default function Contact() {
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full z-10">
         
         {/* العمود الأول: الفورم */}
-        <form className="bg-[#0d0d0d]/80 border border-[#1f1f1f] rounded-2xl p-10 flex flex-col gap-6 shadow-[0_0_25px_rgba(0,255,255,0.15)]">
+        <form  action={`mailto:marcozakaria141@gmail.com`}
+          method="POST"
+          encType="text/plain" className="bg-[#0d0d0d]/80 border border-[#1f1f1f] rounded-2xl p-10 flex flex-col gap-6 shadow-[0_0_25px_rgba(0,255,255,0.15)]">
           <h2 className="text-3xl font-bold text-cyan-300 mb-4">Send a Message</h2>
 
           <input
@@ -42,6 +44,8 @@ export default function Contact() {
           />
 
           <textarea
+            name="Message"
+          required
             rows={5}
             placeholder="Your Message"
             className="p-3 rounded-md bg-black border-2 border-blue-400/40 text-gray-100 focus:outline-none focus:border-blue-400 focus:shadow-[0_0_10px_rgba(0,120,255,0.4)] transition"
@@ -84,13 +88,6 @@ export default function Contact() {
               className="text-green-400 hover:scale-110 transition-transform"
             >
               <FaWhatsapp />
-            </a>
-            <a
-              href="https://www.facebook.com/marko.migo"
-              target="_blank"
-              className="text-blue-400 hover:scale-110 transition-transform"
-            >
-              <FaFacebook />
             </a>
           </div>
         </div>

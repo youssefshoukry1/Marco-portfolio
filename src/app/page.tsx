@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Projects from "./Projects/page";
 import Contact from "./Contact/page";
-import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 export default function Home() {
