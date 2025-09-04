@@ -28,7 +28,8 @@ export default function Contact() {
         {/* العمود الأول: الفورم */}
         <form  action={`mailto:marcozakaria141@gmail.com`}
           method="POST"
-          encType="text/plain" className="bg-[#0d0d0d]/80 border border-[#1f1f1f] rounded-2xl p-10 flex flex-col gap-6 shadow-[0_0_25px_rgba(0,255,255,0.15)]">
+          encType="text/html; charset=UTF-8"
+          className="bg-[#0d0d0d]/80 border border-[#1f1f1f] rounded-2xl p-10 flex flex-col gap-6 shadow-[0_0_25px_rgba(0,255,255,0.15)]">
           <h2 className="text-3xl font-bold text-cyan-300 mb-4">Send a Message</h2>
 
           <input
